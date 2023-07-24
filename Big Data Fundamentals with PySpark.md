@@ -3,7 +3,7 @@
 PySpark is the Python API for Apache Spark, an open-source, distributed computing system used for big data processing and analytics. This notebook will cover the basics of using PySpark, including data loading, data manipulation, and basic operations on Resilient Distributed Datasets (RDDs).
 
 ## 1. Introduction to Big Data Analysis with Spark
-***
+
 The SparkContext object (`sc`) is the entry point to any spark functionality. When running Spark, you start a new Spark application by creating a SparkContext. You can then use this context to create RDDs, accumulators and broadcast variables, access Spark services and run jobs.
 
 **Inspecting SparkContext:**
@@ -44,7 +44,7 @@ list(filter(lambda x: (x%2 != 0), items))
 
 
 ## 2. Programming in PySpark RDD's
-***
+
 In this section, we will look at how data is processed in PySpark. We'll explore *Resilient Distributed Datasets* (RDDs), how to create them, and the transformations and actions we can perform on them. 
 
 ### Resilient Distributed Datasets (RDDs)
@@ -244,7 +244,7 @@ for word in resultRDD_swap_sort.take(10):
 ```
 
 ## 3. PySpark SQL & DataFrames
-***
+
 In this section, we will discuss PySpark SQL and DataFrames. PySpark SQL is a module in Apache Spark that provides a programming interface for working with structured (e.g. relational database) and semi-structured data (e.g. JSON) using SQL as well as DataFrame API.
 
 ### Creating Spark DataFrame from RDD
@@ -352,14 +352,14 @@ hdf.cols["Age"].hist()
 ```
 
 ## 4. Machine Learning with PySpark MLlib
-***
+
 In this section, we will explore the Machine Learning library of PySpark, known as MLlib. MLlib provides several algorithms for machine learning, which can be applied directly to RDDs or DataFrames.
 
 Various tools provided by MLlib include:
 * ML Algorithms: collaborative filtering, classification and clustering
 * Featurization: feature extraction, transformation, dimensionality reduction and selection
 * Pipelines: tools for constructing, evaluating, and tuning ML pipelines
-***
+
 ### PySpark MLlib Algorithms:
 
 MLlib includes several types of machine learning algorithms, including classification, regression, clustering, and collaborative filtering, as well as supporting functionality such as model evaluation and data import.
@@ -379,7 +379,7 @@ from pyspark.mllib.classification import LogisticRegressionWithLBFGS
 from pyspark.mllib.clustering import KMeans
 ```
 
-***
+
 ### Collaborative Filtering (CF)
 
 Use-cases in recommendation systems, for finding users that share common interests. 
@@ -435,7 +435,7 @@ MSE = rates_preds.map(lambda r: (r[1][0] - r[1][1])**2).mean()
 print("Mean Squared Error (MSE):", MSE)
 ```
 
-***
+
 ### Classification
 
 A note on vectors: PySpark MLlib contains specific data types `Vectors` and `LabelledPoint`.
@@ -487,7 +487,7 @@ print(prediction1)
 print(prediction2)
 ```
 
-***
+
 ### Clustering
 
 K-Means Clustering Example:
