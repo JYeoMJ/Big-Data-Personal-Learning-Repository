@@ -3,7 +3,7 @@
 Data cleaning is a crucial step in any data analysis pipeline. In the PySpark environment, we have several techniques and functionalities available to make this process efficient and straightforward. This tutorial/reference guide will cover some of the essential techniques used in PySpark for data cleaning and transformation.
 
 ## Introduction to Data Cleaning with Apache Spark
-***
+
 Spark Schemas define the format of a DataFrame, which you can get by calling the `printSchema()` method on the DataFrame object. Spark SQL provides `StructType` & `StructField` classes to programmatically specify the schema.
 
 Here's an example of defining a Spark schema using `StructType` and `StructField`:
@@ -89,7 +89,7 @@ print('The average flight time is: %d' % avg_duration)
 ```
 
 ## Manipulating DataFrames
-***
+
 ### Refresher on Common DataFrame Operations
 
 In PySpark, we often need to select specific columns or filter rows based on certain conditions. Below are some basic operations for selection and filtering.
@@ -297,7 +297,7 @@ In the above example, `monotonically_increasing_id` is used to continue the ID s
 By understanding and leveraging partitioning and lazy processing, you can optimize your PySpark operations for improved performance and efficiency.
 
 ## Improving Performance
-***
+
 When working with large datasets in PySpark, performance is a crucial aspect. There are several techniques you can use to improve the performance of your PySpark operations.
 
 ### Caching
@@ -544,7 +544,7 @@ Remember that broadcasting should be used judiciously, as it can consume a lot o
 - If you look at the query execution plan, a broadcastHashJoin indicates you've successfully configured broadcasting.
 
 ## Complex Processing and Data Pipelines
-***
+
 In data science and big data analytics, data pipelines are sequences of data processing steps where the output of one step is the input to the next. Each step in the pipeline is a unit of work that takes some data as input and produces some data as output. A data pipeline typically comprises of the following components:
 
 - **Input(s):** This is the initial data source(s). It could be in various formats such as CSV, JSON, from web services, databases, and so on.
@@ -723,7 +723,7 @@ df = df.withColumn('total_avg_size', udfComputeTotal(df.entries) / df.numEntries
 
 In this example, we perform some simple arithmetic operations on the DataFrame columns to calculate averages and areas.
 
-***
+
 
 ### Dog Parsing
 
@@ -810,5 +810,5 @@ joined_df.where('dog_percent > 60').show(10)
 In this block of code, we first calculate the percentage of pixels that represent dogs in each image by dividing the 'dog_pixels' column by the total size of the image (width * height). We then display the first 10 images where this percentage is more than 60%.
 
 ## Conclusion
-***
+
 In this guide, we covered a variety of techniques and functionalities available in PySpark for data cleaning and transformation. We discussed basic and advanced data selection and filtering, column transformations, ArrayType column functions, conditional DataFrame operations, User-Defined Functions (UDFs), partitioning and lazy processing, performance improvement techniques, handling complex data pipelines, and data validation. With these techniques in hand, you can tackle a wide range of data cleaning and transformation tasks in PySpark.
